@@ -4,10 +4,10 @@ FROM vncserver/lubuntu:latest
 RUN git clone https://github.com/novnc/noVNC.git
 #WORKDIR /noVNC/utils
 
-COPY novnc.sh /etc/my_init.d/vncserver.sh
+COPY novnc.sh /etc/my_init.d/novnc.sh
 COPY novnc.sh /etc/my_init.d/bootstrap.sh
+RUN chmod +x /etc/my_init.d/novnc.sh
 RUN chmod +x /etc/my_init.d/bootstrap.sh
-RUN chmod +x /etc/my_init.d/vncserver.sh
 
 #disabling healthcheck
 HEALTHCHECK CMD exit 0
