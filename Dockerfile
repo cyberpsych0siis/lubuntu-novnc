@@ -5,6 +5,8 @@ RUN git clone https://github.com/novnc/noVNC.git
 #WORKDIR /noVNC/utils
 
 COPY novnc.sh /etc/my_init.d/vncserver.sh
+COPY novnc.sh /etc/my_init.d/bootstrap.sh
+RUN chmod +x /etc/my_init.d/bootstrap.sh
 RUN chmod +x /etc/my_init.d/vncserver.sh
 
 #disabling healthcheck
