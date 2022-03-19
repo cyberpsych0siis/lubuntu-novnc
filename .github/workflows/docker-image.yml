@@ -26,7 +26,7 @@ jobs:
       - name: Docker Build & Push Action
         uses: mr-smithers-excellent/docker-build-push@v5.6
         with:
-          image: cyberpsych0siis/dockervm
+          image: cyberpsych0siis/lubuntu-novnc
           tags: ${{ steps.branch-name.outputs.current_branch }}
           registry: thallosaurus.de
           buildArgs: DEBUG=$DEBUG
